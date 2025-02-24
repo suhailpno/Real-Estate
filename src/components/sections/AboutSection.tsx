@@ -1,48 +1,65 @@
 
+import { Shield, Award, Users } from 'lucide-react';
+
 export const AboutSection = () => {
   return (
     <section id="about" className="min-h-screen py-20 bg-accent">
       <div className="container mx-auto px-4 pt-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="relative">
               <img
-                src="https://source.unsplash.com/800x1000/?realtor"
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a"
                 alt="Mohamed Fiajudeen"
-                className="rounded-lg shadow-xl"
+                className="rounded-2xl shadow-2xl w-full object-cover aspect-[3/4]"
               />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/50 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <p className="text-lg font-semibold">Mohamed Fiajudeen</p>
+                <p className="text-white/80">Senior Property Consultant</p>
+              </div>
             </div>
-            <div>
-              <h2 className="font-display text-4xl text-primary mb-6">
-                About Mohamed Fiajudeen
-              </h2>
-              <p className="text-gray-700 mb-6">
-                With over a decade of experience in Singapore's real estate market, I specialize in helping clients find their perfect home across HDB, private condominiums, and landed properties.
-              </p>
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-center p-4 bg-white rounded-lg shadow">
-                  <div className="text-3xl font-bold text-primary mb-2">10+</div>
-                  <div className="text-gray-600">Years Experience</div>
+            <div className="space-y-8">
+              <div>
+                <h2 className="font-display text-4xl text-white mb-6">
+                  Your Trusted Property Expert
+                </h2>
+                <p className="text-white/80 mb-6 leading-relaxed">
+                  With over a decade of experience in Singapore's real estate market, I specialize in helping clients find their perfect home across HDB, private condominiums, and landed properties.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-background/50 backdrop-blur-md p-6 rounded-xl border border-white/10">
+                  <div className="text-3xl font-bold text-secondary mb-2">10+</div>
+                  <div className="text-white/80">Years Experience</div>
                 </div>
-                <div className="text-center p-4 bg-white rounded-lg shadow">
-                  <div className="text-3xl font-bold text-primary mb-2">500+</div>
-                  <div className="text-gray-600">Properties Sold</div>
+                <div className="bg-background/50 backdrop-blur-md p-6 rounded-xl border border-white/10">
+                  <div className="text-3xl font-bold text-secondary mb-2">500+</div>
+                  <div className="text-white/80">Properties Sold</div>
                 </div>
               </div>
-              <ul className="space-y-4 text-gray-700">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
-                  CEA Licensed Property Agent
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
-                  Specializing in HDB, Condo, and Landed Properties
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
-                  Multilingual: English, Malay, Tamil
-                </li>
-              </ul>
+
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 text-white/80">
+                  <div className="bg-secondary/20 p-2 rounded-lg">
+                    <Shield className="h-5 w-5 text-secondary" />
+                  </div>
+                  <span>CEA Licensed Property Agent</span>
+                </div>
+                <div className="flex items-center gap-4 text-white/80">
+                  <div className="bg-secondary/20 p-2 rounded-lg">
+                    <Award className="h-5 w-5 text-secondary" />
+                  </div>
+                  <span>Specializing in Premium Properties</span>
+                </div>
+                <div className="flex items-center gap-4 text-white/80">
+                  <div className="bg-secondary/20 p-2 rounded-lg">
+                    <Users className="h-5 w-5 text-secondary" />
+                  </div>
+                  <span>Multilingual: English, Malay, Tamil</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
